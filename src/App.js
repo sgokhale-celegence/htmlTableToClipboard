@@ -1,55 +1,35 @@
 import React from "react";
+import {
+  ScoringReport,
+  ExclutionReport,
+  OverallSLRReport,
+  SummaryReport,
+  AppendixReport_Pubmed
+} from "./BasicHTMLTableComponent";
+import { AntTableComponent } from "./AntTableComponent";
 import "./styles.css";
 
 export default function App() {
   return (
     <div className="App">
       <h1>Copy Table Data To Clipboard</h1>
-      <h2>Sample Table</h2>
-      <TableComponentWithClipButton />
+      <h2>Sample HTML Table - Exclusion Report</h2>
+      <ExclutionReport />
+      <hr />
+      <h2>Sample HTML Table - Scoring Report</h2>
+      <ScoringReport />
+      <hr />
+      <h2>Sample HTML Table - Overall SLR Report</h2>
+      <OverallSLRReport />
+      <hr />
+      <h2>Sample HTML Table - Summary  Report</h2>
+      <SummaryReport />
+      <hr />
+      <h2>Sample HTML Table - Appendix Report - Pubmed</h2>
+      <AppendixReport_Pubmed />
+      <hr />
+      <h2>Sample Ant Table</h2>
+      <AntTableComponent />
     </div>
   );
 }
-
-export const TableComponentWithClipButton = () => {
-  const copyTableToClipboard = () => {
-    var aux = document.createElement("div");
-    aux.setAttribute("contentEditable", true);
-    aux.innerHTML = document.getElementById("exclusion").innerHTML;
-    aux.setAttribute("onfocus", "document.execCommand('selectAll',false,null)");
-    document.body.appendChild(aux);
-    aux.focus();
-    document.execCommand("copy");
-    document.body.removeChild(aux);
-  };
-
-  return (
-    <>
-      <div id="exclusion">
-        <table border="1">
-          <thead>
-            <tr>
-              <th>Sl No.</th>
-              <th>Exclusion Reason</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Duplicate</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Not Available</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Less Score</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <button onClick={() => copyTableToClipboard()}> Click To Copy </button>
-    </>
-  );
-};
