@@ -1,0 +1,2 @@
+# htmlTableToClipboard
+Created with CodeSandbox
