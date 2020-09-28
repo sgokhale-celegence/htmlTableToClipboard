@@ -179,7 +179,6 @@ export const SummaryReport = () => {
               <td>Duplicate</td>
               <td>1</td>
               <td>Duplicate</td>
-              <td>1</td>
             </tr>
           </tbody>
         </table>
@@ -216,7 +215,6 @@ export const AppendixReportPubmed = () => {
               <td>1</td>
               <td>Duplicate</td>
               <td>1</td>
-              <td>Duplicate</td>
             </tr>
           </tbody>
         </table>
