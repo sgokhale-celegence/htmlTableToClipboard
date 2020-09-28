@@ -4,7 +4,7 @@ import {
   ExclutionReport,
   OverallSLRReport,
   SummaryReport,
-  AppendixReport_Pubmed
+  AppendixReportPubmed
 } from "./BasicHTMLTableComponent";
 import { AntTableComponent } from "./AntTableComponent";
 import "./styles.css";
@@ -26,7 +26,7 @@ export default function App() {
       <SummaryReport />
       <hr />
       <h2>Sample HTML Table - Appendix Report - Pubmed</h2>
-      <AppendixReport_Pubmed />
+      <AppendixReportPubmed />
       <hr />
       <h2>Sample Ant Table</h2>
       <AntTableComponent />

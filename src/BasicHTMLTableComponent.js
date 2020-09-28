@@ -189,7 +189,7 @@ export const SummaryReport = () => {
   );
 };
 
-export const AppendixReport_Pubmed = () => {
+export const AppendixReportPubmed = () => {
   const divID = "Appendix";
   const reportName = "Appendix Report - Pubmed";
   return (
