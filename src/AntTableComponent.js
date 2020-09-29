@@ -1,6 +1,6 @@
 import React from "react";
 import { Table } from "antd";
-import {CopyToClipboard} from './CopyToClopboard'
+import { CopyToClipboard } from "./CopyToClopboard";
 import "antd/dist/antd.css";
 import "./styles.css";
 
@@ -121,14 +121,15 @@ export const AntTableComponent = () => {
     <>
       <div>Ant Table goes here.</div>
       <div id={divID}>
-      <Table
-        columns={columns}
-        dataSource={data}
-        title={() => reportName }
-        bordered
-      />
+        <Table
+          columns={columns}
+          dataSource={data}
+          title={() => reportName}
+          bordered
+          pagination={false}
+        />
       </div>
-      <CopyToClipboard divID = {divID} reportName = {reportName} />
+      <CopyToClipboard divID={divID} reportName={reportName} />
     </>
   );
 };
